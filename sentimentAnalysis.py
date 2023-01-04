@@ -2,7 +2,7 @@ from transformers import AutoTokenizer,AutoModelForSequenceClassification
 from scipy.special import softmax
 
 
-tweet = "@Yatharth today is cold @ home https://yatharth.com"
+tweet = "Great content!"
 
 tweet_words = []
 

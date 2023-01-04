@@ -2,16 +2,13 @@ import requests
 
 data = [
  {
-   "tweet_text": "Stats on Twitter World Cup"
+   "tweet_text": "Great Content!"
  },
  {
-   "tweet_text": "As the saying goes, be careful what you wish, as you might get it"
- },
- {
-   "tweet_text": "شب یلدا مبارک! ❤️"
+   "tweet_text": "This is not how it is done! Very Bad"
  }
 ]
 
 
-res = requests.post("http://127.0.0.1:5000/api/language-detection",json=data)
+res = requests.post("http://127.0.0.1:5000/api/sentiment-score",json=data)
 print(res.text)
