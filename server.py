@@ -5,6 +5,8 @@ from spacy_language_detection import LanguageDetector
 from flask import Flask, request, jsonify
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from scipy.special import softmax
+from flask_cors import CORS, cross_origin
+
 
 
 def isEnglish(nlp,name):
@@ -37,8 +39,11 @@ def filterWord(tweet):
 
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/api/language-detection',methods=['POST'])
+@cross_origin()
 def detection():
     languageDetection = []
     input = request.get_json(force=True)
@@ -47,6 +52,7 @@ def detection():
     return jsonify(languageDetection)
 
 @app.route('/api/sentiment-score',methods=['POST'])
+@cross_origin()
 def sentiment():
     modelName = "cardiffnlp/twitter-roberta-base-sentiment"
     model = AutoModelForSequenceClassification.from_pretrained(modelName)
