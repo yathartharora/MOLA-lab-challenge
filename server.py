@@ -7,8 +7,6 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from scipy.special import softmax
 
 
-
-
 def isEnglish(nlp,name):
     return LanguageDetector(seed=42)
 
