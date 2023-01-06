@@ -1,0 +1,11 @@
+Flask
+Flask_Cors
+requests
+scipy
+spacy==3.0.0
+spacy_language_detection
+transformers==4.25.1
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.7.0+cpu
+torchvision==0.8.1+cpu
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz

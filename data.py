@@ -10,5 +10,5 @@ data = [
 ]
 
 
-res = requests.post("http://127.0.0.1:5000/api/sentiment-score",json=data)
+res = requests.post("http://127.0.0.1:5000/api/language-detection",json=data)
 print(res.text)

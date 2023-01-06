@@ -4,10 +4,10 @@ chrome.runtime.onMessage.addListener(
                   "from a content script:" + sender.tab.url :
                   "from the extension");
     const t = document.getElementsByClassName("css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu")
-    // const t = tweets.getElementsByClassName("css-1dbjc4n")
     tweets = []
     for(i=0;i<t.length;i++){
         const res = t[i].getElementsByClassName("css-901oao r-1nao33i r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0")
+        console.log(res[0])
         const r = res[0].getElementsByClassName("css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0")
 
         const h = t[i].getElementsByClassName("css-1dbjc4n r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs r-1ny4l3l")
